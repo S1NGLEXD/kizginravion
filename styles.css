@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d91aeb;
+}
+
+#container {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+#ravion {
+    width: 900px;
+    height: 900px;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.kizma {
+    animation: kizmaAnimasyon 0.3s;
+}
+
+@keyframes kizmaAnimasyon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#container:hover #message {
+    opacity: 1;
+    z-index: 1;
+}
+
+#cornerText {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: #333;
+}
+
+#cornerText2 {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 50px;
+    color: #333;
+}
